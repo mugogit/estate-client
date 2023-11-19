@@ -1,0 +1,51 @@
+@import "./mixins";
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+  outline: none;
+}
+
+:root {
+  --clr-white: #fff;
+  --clr-black: #000;
+  --clr-secondary: #ff850f;
+  --clr-light-gray: #f3f3f3;
+  --clr-gray: #8e8ea1;
+  --box-shadow-1: 0 5px 15px rgba(0, 0, 0, 0.3);
+  --box-shadow-2: 0 5px 15px rgba(255, 94, 58, 0.2);
+}
+
+.container {
+  max-width: 1350px;
+  margin: 0 auto;
+  height: 100%;
+
+  @include desktop {
+    max-width: 1000px;
+  }
+  @include tablet {
+    max-width: 760px;
+  }
+
+  @include mobile {
+    max-width: 580px;
+  }
+
+  @include extra-small {
+    max-width: 400px;
+  }
+
+  @include extra-extra-small {
+    max-width: 100%;
+  }
+}

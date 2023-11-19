@@ -1,0 +1,50 @@
+.image_slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 16/12;
+  .slider_container {
+    width: 100%;
+    aspect-ratio: 16/12;
+    display: flex;
+    img {
+      width: 100%;
+      aspect-ratio: 16/12;
+      object-fit: cover;
+      transition: 0.4s ease-in-out;
+    }
+  }
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 9;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      box-shadow: var(--box-shadow-1);
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    &.next {
+      right: 5px;
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+    &.prev {
+      left: 5px;
+      svg {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
